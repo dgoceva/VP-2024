@@ -121,7 +121,7 @@ for i in reversed(range(10)):
     print(i,data[i])
 
 keys = [1,2,3,4,5,6]
-values = [1, 8, 27, 64, 125]
+values = [1, 8, 27, 64, 125]5
 
 d = dict(zip(keys, values))
 print(d)
