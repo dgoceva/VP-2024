@@ -23,6 +23,18 @@ def fib3(n=5,L=[]):
 #         print(L,n)
 #         # return fib3(n-1, L + [L[-1] + L[-2]])
 
+def fib31(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [1]
+    elif n == 2:
+        return [1, 1]
+    else:
+        fib_list = fib31(n-1)
+        fib_list.append(fib_list[-1] + fib_list[-2])
+        return fib_list
+    
 def fib4(n=5,fib_list=[]):
     fib_list = [1, 1]
     for i in range(2, n):
@@ -116,3 +128,5 @@ print(mysum1([1,2,3,4,5]))
 print(dict(**{"one":1,"two":2}))
 
 print(search(name="name",dict={"one":1,"name":"Ivan"}))
+
+print(fib31(10))
